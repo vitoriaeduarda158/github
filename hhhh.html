@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIKE</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+      } /* Barra superior */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: black;
+        color: white;
+        padding: 15px 30px;
+      }
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .search-box {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 30px;
+        padding: 8px 15px;
+        width: 40%;
+      }
+      .search-box input {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 15px;
+      }
+      .search-box img {
+        width: 20px;
+      }
+      .cart {
+        position: relative;
+      }
+      .cart img {
+        width: 40px;
+        filter: invert(1);
+      }
+      .cart-count {
+        position: absolute;
+        top: -5px;
+        right: -8px;
+        background: white;
+        color: black;
+        font-weight: bold;
+        padding: 3px 7px;
+        border-radius: 50%;
+      } /* Banner */
+      .banner {
+        width: 100%;
+        height: 600px;
+      }
+      .bannerimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      } /* Produtos */
+      .caixas {
+        max-width: 1200px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+      .caixa {
+        background: white;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 320px;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 10px;
+      }
+      .caixa:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .nike-logo {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+      }
+      .caixa p {
+        margin-top: 8px;
+      }
+      .caixa button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .caixa button:hover {
+        background: #333;
+      } /* Newsletter */
+      .newsletter {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        margin-top: 30px;
+      }
+      .newsletter h2 {
+        margin-bottom: 20px;
+      }
+      .newsletter input {
+        padding: 12px;
+        width: 320px;
+        max-width: 80%;
+        border: none;
+        border-radius: 5px;
+      }
+      .newsletter button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        background: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 10px;
+      } /* Responsivo */
+      @media (max-width: 900px) {
+        .caixas {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .caixas {
+          grid-template-columns: 1fr;
+        }
+        .banner {
+          height: 300px;
+        }
+        .search-box {
+          width: 55%;
+        }
+        .newsletter button {
+          margin-top: 10px;
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">NIKE</div>
+      <div class="search-box">
+        <input type="text" placeholder="Buscar tênis..." />
+        <img
+          src="https://img.icons8.com/ios-filled/50/000000/search.png"
+          alt=""
+        />
+      </div>
+      <div class="cart">
+        <img
+          src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png"
+          alt=""
+        />
+        <div class="cart-count">8</div>
+      </div>
+    </div>
+    <div class="banner">
+      <img
+        class="bannerimg"
+        src="https://cdn.dribbble.com/userupload/13118950/file/original-cfaebacb75910a02e08e618b7ab2a067.jpg?resize=752x&vertical=center"
+        alt="Banner Nike"
+      />
+    </div>
+    <div class="caixas">
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0it5qeBvOgglm6TROeQcnxEjEhwR7vw55bw&s"
+          alt=""
+        />
+        <p>Tênis Nike Feminino</p>
+        <p>R$ 250,00</p>
+        <button>Comprar</button>
+      </div>
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcqWs-iG3RjFEVlXvUlhMq3mE4BSRyDIzKZQ&s"
+          alt=""
+        />
+        <p>Tênis Nike Esportivo Unissex</p>
+        <p>R$ 190,00</p>
+        <button>Comprar</button>
+      </div>
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCdWZCmmpwdwW3lK1d5mUt-cCfXJYN0Ermgg&s"
+          alt=""
+        />
+        <p>Tênis Nike Jordan Masculino</p>
+        <p>R$ 899,00</p>
+        <button>Comprar</button>
+      </div>
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://espacotenis.vteximg.com.br/arquivos/ids/173419-265-265/nike-court-legacy-canvas-branco--1-.jpg?v=639075769486530000"
+          alt=""
+        />
+        <p>Tênis Nike White Unissex</p>
+        <p>R$ 399,00</p>
+        <button>Comprar</button>
+      </div>
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQSCcht0l3zVpd5jquINDMT12hvojhMZcBSw&s"
+          alt=""
+        />
+        <p>Tênis Nike Masculino</p>
+        <p>R$ 289,99</p>
+        <button>Comprar</button>
+      </div>
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://http2.mlstatic.com/D_944452-MLB106101809105_012026-O.webp"
+          alt=""
+        />
+        <p>Tênis Nike Masculino</p>
+        <p>R$ 390,00</p>
+        <button>Comprar</button>
+      </div>
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://http2.mlstatic.com/D_831428-MLB100878126243_122025-O.jpg"
+          alt=""
+        />
+        <p>Tênis Nike Masculino</p>
+        <p>R$ 199,90</p>
+        <button>Comprar</button>
+      </div>
+      <div class="caixa">
+        <img
+          class="nike-logo"
+          src="https://http2.mlstatic.com/D_831994-MLB105975368287_012026-O.jpg"
+          alt=""
+        />
+        <p>Tênis Nike Masculino</p>
+        <p>R$ 390,90</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <div class="newsletter">
+      <h2>Receba novidades da Nike</h2>
+      <input type="email" placeholder="Digite seu e-mail" />
+      <button>Cadastrar</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>feito com amor por Eduarda Almeida</p>
+  </body>
+</html>
